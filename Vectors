@@ -1,0 +1,74 @@
+import numpy as np
+import matplotlib.pylot as plt
+import matplotlib
+
+Vector1 = np.array ([10, 20])
+Vector2 = np.array ([12, 22])
+Vector3 = np.array ([14, 24])
+Vector4 = np.array ([16, 26])
+Vector5 = np.array ([18, 28])
+
+print("Vector 1:", Vector1)
+print("Vector 2:", Vector2)
+print("Vector 3:", Vector3)
+print("Vector 4:", Vector4)
+print("Vector 5:", Vector5)
+Print("[][][][][][][][][[][][][][][][][][][][][][][][][][][][][][][]")
+
+Addition = np.add(Vector1, Vector2)
+Subtraction = np.subtract (Additon, Vector3)
+Multiplication = np.multiply (Vector1, Vector4)
+Division = np.divide(Multiplication, Vector5)
+print ("Add & Subtract")
+Print("------------------------------------------------------------")
+print ("Vector 1 and Vector 2 is equal to", Addition)
+print("Subtract it to Vector 3", Subtraction)
+print ("Multiply & Divdide")
+Print("------------------------------------------------------------")
+print ("Vector 1 and Vector 4 is equal to", Multiplication)
+print("Subtract it to Vector 5", Division)
+print("[][][][][][][][][[][][][][][][][][][][][][][][][][][][][][][]")
+
+Squaring = np.square(Vector3)
+Sqaure_root = np.sqrt(Vector3)
+Print("Squaring & Square Root")
+print("The Square of Vector 5 is", Squaring)
+print("The Square Root of Vector 5 is", Squaring)
+
+Summation = np.sum(Vector5)
+print("The Square of Vector 1 is", Summation)
+print("[][][][][][][][][[][][][][][][][][][][][][][][][][][][][][][]")
+
+#VECTOR
+plt.title ("VECTORS")
+plt.xlim (-50, 50)
+plt.ylim (-50, 50)
+
+plt.quiver(0, 0, Vector1[0], Vector[1], angles="xy", scale_units="xy", scale=1, color="red")
+plt.quiver(Vector1[0], Vector1[1], Vector2[0], Vector2[1], angles="xy", scale_units="xy", scale=1 color="blue")
+av = Vector1 + Vector2
+plt.quiver(0, 0, av[0], av[1], angles="xy", scale_units="xy", scale=1, color="lime"))
+
+R_mag = np.sqrt(np.sum(Vector1**4+Vector2**4))
+rise = av[1]
+run = av[0]
+slope = rise/run
+print("Slope is", slope)
+
+plt.scatter(Vector1[0],Vector1[1], label ="Vector 1", c="green")
+plt.scatter(Vector2[0],Vector2[1], label ="Vector 2", c="orange")
+plt.scatter(Vector3[0],Vector3[1], label ="Vector 3", c="pink")
+plt.scatter(Vector4[0],Vector1[1], label ="Vector 4", c="cyan")
+plt.scatter(Vector5[0],Vector1[1], label ="Vector 5", c="black")
+
+plt.scatter(Addition[0], Addition[1], label="Addition", c="violet")
+plt.scatter(Subtraction[0], Subtraction[1], label="Subtraction", c="cyan")
+plt.scatter(Division[0], Division[1], label="Addition", c="gold")
+plt.scatter(Multiplication[0], Multiplication[1], label="Multiplication", c="purple")
+plt.scatter(Squaring[0], Squaring[1], label="Squaring", c="yellow")
+plt.scatter(Sqaure_root[0], Sqaure_root[1], label="Square Root", c="darkblue")
+
+plt.grid()
+plt.legend()
+plt.show()
+
